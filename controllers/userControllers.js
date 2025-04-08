@@ -17,7 +17,7 @@ const createUser = async (req, res) => {
       fullName,
       emailId,
       password,
-      amount, // optional, defaults to 0 if not given
+      amount, 
     });
 
     await newUser.save();

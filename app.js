@@ -1,17 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
-require("dotenv").config(); // Load .env file
+require("dotenv").config(); 
 
-const app = express(); // ✅ Create app before using it
+const app = express(); 
 
-// Middleware to parse JSON
+
 app.use(express.json());
 
-// Routes
+
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/user', userRoutes);
 
-// Connect to MongoDB
+
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
