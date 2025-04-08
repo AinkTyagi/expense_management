@@ -7,12 +7,13 @@ const {
   addMoney,
   subtractMoney,
   getBalance,
-} = require('../controllers/userController');
+} = require('../controllers/userControllers');
 
 // Define routes
 router.post('/create', createUser);
 router.post('/add', addMoney);
 router.post('/subtract', subtractMoney);
-router.get('/balance/:id', getBalance);
+router.get('/balance/:emailId', getBalance);
+
 
 module.exports = router;
